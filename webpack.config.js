@@ -5,7 +5,15 @@ var config={
         path:            path.resolve(__dirname,'dist'),
         filename:          'build.js'
     },
-    mode:               "development"
+    mode:               "development",
+    module:              {
+        rules:           [
+            {
+                use:       'babel-loader',
+                test:      /\.js$/
+            }
+        ]
+    }
 
 };
 module.exports                  =config;
